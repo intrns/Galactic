@@ -2,7 +2,9 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Galatic - Made By Intrns", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Combat = Window:MakeTab({
-	Name = "Aimlock",Icon = "rbxassetid://4483345998",PremiumOnly = false})
+	Name = "Aimlock",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false})
 
 
 local Section = Combat:AddSection({
