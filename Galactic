@@ -31,13 +31,13 @@ local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 local Drawing = Drawing or {}
 
-
+-- Configuration Variables
 local aimbotEnabled = true
 local aimKey = Enum.KeyCode.LeftShift
 local aimSmoothness = 3.9
 local aimlockDistance = 489
-local aimSpeedX = 1.5  
-local aimSpeedY = 1.5 
+local aimSpeedX = 1  
+local aimSpeedY = 1  
 local fovEnabled = false
 local fovRadius = 100
 local fovVisible = false
@@ -56,15 +56,12 @@ local randomizeHitChance = false
 local prioritizeLowHealth = false
 local autoDisableAim = true
 local autoDisableDistance = 489
-
-local x = 0
-local y = 0
-local z = 0
-
-local autoFire = false
-local aimOffset = Vector3.new(x, y, z)
 local velocityPrediction = true
 local smartSwitch = false
+local  aimSpeed = 1  -- New aimSpeed variable
+
+local autoFire = false
+local aimOffset = Vector3.new(0, 0, 0)
 
 local function getRainbowColor(t)
     local r = math.sin(t * 2 * math.pi) * 0.5 + 0.5
@@ -110,9 +107,9 @@ local function drawFOVShape()
 end
 
 local function getAimPart(target)
-    local aimPart = target.Character:FindFirstChild(aimPart)
-    if aimPart then
-        return aimPart.Position + aimOffset 
+    local aimPartObject = target.Character:FindFirstChild(aimPart)
+    if aimPartObject then
+        return aimPartObject.Position + aimOffset 
     else
         return target.Character:FindFirstChild("UpperTorso").Position + aimOffset
     end
@@ -602,7 +599,7 @@ Combat:AddSlider({
 Combat:AddSlider({
 	Name = "Smoothness",
 	Min = 1,
-	Max = 75,
+	Max = 15,
 	Default = 4.9,
 	Color = Color3.fromRGB(255, 255, 255),
 	Increment = 0.1,
