@@ -602,7 +602,7 @@ Combat:AddSlider({
 Combat:AddSlider({
 	Name = "Smoothness",
 	Min = 1,
-	Max = 10,
+	Max = 75,
 	Default = 4.9,
 	Color = Color3.fromRGB(255, 255, 255),
 	Increment = 0.1,
@@ -659,7 +659,7 @@ Combat:AddSlider({
 Combat:AddSlider({
 	Name = "Aim Speed",
 	Min = 1,
-	Max = 10,
+	Max = 25,
 	Default = 0.1,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
