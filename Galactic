@@ -1,6 +1,26 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Galatic - Made By Intrns", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
+local Combat = Window:MakeTab({
+	Name = "Aimlock",Icon = "rbxassetid://4483345998",PremiumOnly = false})
+
+
+local Section = Combat:AddSection({
+	Name = "Aimlock Options"
+})
+
+
+local Esp = Window:MakeTab({
+	Name = "Esp",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Section = Esp:AddSection({
+	Name = "Esp Options"
+})
+
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local Workspace = game:GetService("Workspace")
